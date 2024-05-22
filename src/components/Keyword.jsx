@@ -1,7 +1,14 @@
 import React from "react";
 
-export default function Keyword() {
+export default function Keyword({ parent, text }) {
     return (
-        <p>Keyword component</p>
+        <div className="">
+            {parent === "filter" ? (
+                <div className="">
+                    {text}
+                    <span className="">X</span>
+                </div>
+            ) : parent === "job" ? text : null}
+        </div>
     );
 }

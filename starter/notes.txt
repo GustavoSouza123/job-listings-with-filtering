@@ -9,4 +9,4 @@ Content
 
 
 * state in the Content component
-filters=[]
+keywords=[]
