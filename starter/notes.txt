@@ -1,0 +1,12 @@
+Background
+Content
+  Filter({ keywords })
+    Keyword({ parent="filter" })
+  Job
+    Image
+    Tag
+    Keyword({ parent="job" })
+
+
+* state in the Content component
+filters=[]
