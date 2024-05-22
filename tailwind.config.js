@@ -13,6 +13,10 @@ export default {
         "grayish-cyan-3": "var(--dark-grayish-cyan)",
         "grayish-cyan-4": "var(--very-dark-grayish-cyan)",
       },
+      backgroundImage: {
+        "desktop-header": "url('./src/assets/bg-header-desktop.svg')",
+        "mobile-header": "url('./src/assets/bg-header-mobile.svg')",
+      }
     },
   },
   plugins: [],
