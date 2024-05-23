@@ -1,7 +1,9 @@
 import React from "react";
 
-export default function Image() {
+export default function Image({ src, alt }) {
     return (
-        <p>Image component</p>
+        <div className="w-[88px] h-[88px] rounded-full bg-grayish-cyan-4">
+            <img src={src} alt={alt} />
+        </div>
     );
 }

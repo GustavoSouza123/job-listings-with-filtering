@@ -13,11 +13,15 @@ export default {
         "grayish-cyan-3": "var(--dark-grayish-cyan)",
         "grayish-cyan-4": "var(--very-dark-grayish-cyan)",
         "white": "var(--white)",
+        "box-shadow": "var(--box-shadow)",
       },
       backgroundImage: {
         "desktop-header": "url('./src/assets/bg-header-desktop.svg')",
         "mobile-header": "url('./src/assets/bg-header-mobile.svg')",
-      }
+      },
+      boxShadow: {
+        custom: "0px 20px 30px -20px var(--box-shadow)",
+      },
     },
   },
   plugins: [],
