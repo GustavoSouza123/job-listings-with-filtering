@@ -3,11 +3,11 @@ import Image from "./Image";
 import Tag from "./Tag";
 import Keyword from "./Keyword";
 
-export default function Job({ tags = {new: true, featured: true}, keywords }) {
+export default function Job({ tags = {new: true, featured: true}, src, keywords }) {
     return (
         <div className={`w-full max-w-[1110px] h-[152px] bg-white rounded-md flex justify-between items-center gap-4 px-10 border-l-[5px] border-solid ${tags.featured ? 'border-cyan' : 'border-transparent'} mb-10 shadow-custom`}>
             <div className="flex items-center gap-6">
-                <Image />
+                <Image src="" />
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center">
                         <div className="text-cyan font-bold mr-4 text-lg">Photosnap</div>
