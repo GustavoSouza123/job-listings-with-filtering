@@ -6,10 +6,10 @@ import Footer from "./Footer";
 
 export default function App() {
     return (
-        <div className="">
+        <div className="relative pb-10">
             <Background />
             <Content />
-            <Footer />           
+            <Footer />
         </div>
     );
 }

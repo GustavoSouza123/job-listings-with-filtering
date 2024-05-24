@@ -14,7 +14,7 @@ export default function Content() {
                 const json = await response.json();
                 setJobs(json.map(job => <Job key={job.id} data={job} />));
             } catch(err) {
-                console.log(err);
+                console.error(err);
             }
         }
 
