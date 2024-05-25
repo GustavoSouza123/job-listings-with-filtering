@@ -13,7 +13,7 @@ export default function Content() {
                 const response = await fetch('./data.json');
                 const json = await response.json();
                 setJobsData(json);
-            } catch(err) {
+           } catch(err) {
                 console.error(err);
             }
         }
