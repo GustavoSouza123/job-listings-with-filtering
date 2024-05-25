@@ -9,12 +9,15 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 assetFileNames: (assetInfo) => {
-                    let extType = assetInfo.name.split('.').at(1);
-                    if(/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-                        return `public/[name]-[hash][extname]`;
-                    } else if(/css/i.test(extType)) {
-                        return `public/[name]-[hash][extname]`;
+                    const info = assetInfo.name.split('.');
+                    const extType = info[info.length - 1];
+                    if (/\.(png|jpe?g|gif|svg|webp|webm|mp3)$/.test(assetInfo.name)) {
+                        return `public/[name]-[hash].${extType}`;
                     }
+                    if (/\.(css)$/.test(assetInfo.name)) {
+                        return `assets/[name]-[hash].${extType}`;
+                    }
+                    return `[name]-[hash].${extType}`;
                 },
             },
         },
