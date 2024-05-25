@@ -2,23 +2,26 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Filter from "./Filter";
 import Job from "./Job";
+import data from "../../data.json";
 
 export default function Content() {
     const [filterKeywords, setFilterKeywords] = useState([]);
     const [jobsData, setJobsData] = useState([]);
 
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await fetch('./data.json');
-                const json = await response.json();
-                setJobsData(json);
-           } catch(err) {
-                console.error(err);
-            }
-        }
+        // async function fetchData() {
+        //     try {
+        //         const response = await fetch('./data.json');
+        //         const json = await response.json();
+        //         setJobsData(json);
+        //    } catch(err) {
+        //         console.error(err);
+        //     }
+        // }
 
-        fetchData();
+        // fetchData();
+
+        setJobsData(data);
     }, []);
 
     function handleKeywordClick(keyword) {
