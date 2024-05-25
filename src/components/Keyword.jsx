@@ -1,5 +1,5 @@
 import React from "react";
-import removeIcon from "../../public/icon-remove.svg";
+import removeIcon from "../assets/icon-remove.svg";
 
 export default function Keyword({ parent, text, onClick, onRemoveClick }) {
     return (
