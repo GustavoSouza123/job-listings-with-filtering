@@ -20,8 +20,8 @@ export default {
                 "box-shadow": "var(--box-shadow)",
             },
             backgroundImage: {
-                "desktop-header": "url('./src/assets/bg-header-desktop.svg')",
-                "mobile-header": "url('./src/assets/bg-header-mobile.svg')",
+                "desktop-header": "url('./public/bg-header-desktop.svg')",
+                "mobile-header": "url('./public/bg-header-mobile.svg')",
             },
             boxShadow: {
                 custom: "0px 20px 30px -20px var(--box-shadow)",
