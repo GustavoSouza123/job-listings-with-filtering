@@ -36,7 +36,7 @@ export default function Content() {
     }
 
     return (
-        <div className="w-full min-h-[calc(100vh-155px)] flex flex-col items-center bg-grayish-cyan-1 px-6">
+        <div className="w-full min-h-[calc(100vh-155px-40px)] flex flex-col items-center bg-grayish-cyan-1 px-6">
             <Filter keywords={filterKeywords} onRemoveClick={handleRemoveClick} onClearClick={handleClearClick} />
             {jobsData.map(job => 
                 <Job key={job.id} data={job} filterKeywords={filterKeywords} onKeywordClick={handleKeywordClick} />
