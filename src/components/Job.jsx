@@ -7,7 +7,7 @@ export default function Job({ data, filterKeywords, onKeywordClick }) {
     const keywords = [data.role, data.level, ...data.languages, ...data.tools];
 
     const component = (
-        <div key={data.id} className={`w-full max-w-[1110px] lg:h-[152px] bg-white rounded-md flex sm:flex-col justify-between items-center sm:px-[24px] px-10 py-7 sm:pt-[32px] border-l-[5px] border-solid ${data.featured ? 'border-cyan' : 'border-transparent'} mb-[40px] shadow-custom`}>
+        <div key={data.id} className={`w-full max-w-[1110px] lg:h-[152px] bg-white rounded-md flex sm:flex-col justify-between items-center sm:px-[24px] px-10 py-7 sm:pt-[32px] border-l-[5px] border-solid ${data.featured ? 'border-cyan' : 'border-transparent'} mb-[24px] sm:mb-[40px] shadow-custom`}>
             <div className="sm:w-full w-1/2 lg:min-w-[380px] flex items-center gap-6 sm:relative">
                 <Image src={data.logo} />
                 <div className="flex flex-col gap-2">

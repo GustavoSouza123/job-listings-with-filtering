@@ -24,7 +24,7 @@ export default {
                 "mobile-header": "url('../assets/bg-header-mobile.svg')",
             },
             boxShadow: {
-                custom: "0px 20px 30px -20px var(--box-shadow)",
+                custom: "0px 10px 30px -20px var(--box-shadow)",
             },
         },
     },

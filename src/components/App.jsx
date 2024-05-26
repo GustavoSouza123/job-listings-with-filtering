@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 export default function App() {
     return (
-        <div className="relative pb-10">
+        <div className="">
             <Background />
             <Content />
             <Footer />
