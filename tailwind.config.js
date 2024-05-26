@@ -19,10 +19,10 @@ export default {
                 "white": "var(--white)",
                 "box-shadow": "var(--box-shadow)",
             },
-            // backgroundImage: {
-            //     "desktop-header": "url('./src/assets/bg-header-desktop.svg')",
-            //     "mobile-header": "url('./src/assets/bg-header-mobile.svg')",
-            // },
+            backgroundImage: {
+                "desktop-header": "url('../assets/bg-header-desktop.svg')",
+                "mobile-header": "url('../assets/bg-header-mobile.svg')",
+            },
             boxShadow: {
                 custom: "0px 20px 30px -20px var(--box-shadow)",
             },
