@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "./Image";
 import Tag from "./Tag";
 import Keyword from "./Keyword";
@@ -7,7 +8,7 @@ export default function Job({ data, filterKeywords, onKeywordClick }) {
     const keywords = [data.role, data.level, ...data.languages, ...data.tools];
 
     const component = (
-        <div key={data.id} className={`w-full max-w-[1110px] lg:h-[152px] bg-white rounded-md flex sm:flex-col justify-between items-center sm:px-[24px] px-10 py-7 sm:pt-[32px] border-l-[5px] border-solid ${data.featured ? 'border-cyan' : 'border-transparent'} mb-[24px] sm:mb-[40px] shadow-custom`}>
+        <div key={data.id} className={`w-full h-full bg-white rounded-md flex sm:flex-col justify-between items-center sm:px-[24px] px-10 py-7 sm:pt-[32px] border-l-[5px] border-solid ${data.featured ? 'border-cyan' : 'border-transparent'} shadow-custom`}>
             <div className="sm:w-full w-1/2 lg:min-w-[380px] flex items-center gap-6 sm:relative">
                 <Image src={data.logo} />
                 <div className="flex flex-col gap-2">
@@ -41,7 +42,21 @@ export default function Job({ data, filterKeywords, onKeywordClick }) {
         </div>
     );
 
+    const jobsInView = Math.floor(parseInt((window.innerHeight - 200) / 150));
+    const delayTime = data.id <= jobsInView  ? (0.1 + (data.id - 0.05) / 10) : 0.3;
+    
     if(filterKeywords.length === 0 || filterKeywords.every(keyword => keywords.includes(keyword))) {
-        return component;
+        return (
+            <motion.div
+                className="w-full max-w-[1110px] lg:h-[152px] mb-[24px] sm:mb-[40px]"
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ type: "spring", delay: delayTime, duration: 0.5 }}
+                viewport={{ once: true }}
+            >
+                {component}
+            </motion.div>
+        );
     }
 }
