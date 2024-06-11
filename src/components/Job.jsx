@@ -43,7 +43,7 @@ export default function Job({ data, filterKeywords, onKeywordClick }) {
     );
 
     const jobsInView = Math.floor(parseInt((window.innerHeight - 200) / 150));
-    const delayTime = data.id <= jobsInView  ? (0.1 + (data.id - 0.05) / 10) : 0.3;
+    const delayTime = data.id <= jobsInView  ? (0.1 + (data.id / 10) - 0.05) : 0.3;
     
     if(filterKeywords.length === 0 || filterKeywords.every(keyword => keywords.includes(keyword))) {
         return (
@@ -51,7 +51,6 @@ export default function Job({ data, filterKeywords, onKeywordClick }) {
                 className="w-full max-w-[1110px] lg:h-[152px] mb-[24px] sm:mb-[40px]"
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
                 transition={{ type: "spring", delay: delayTime, duration: 0.5 }}
                 viewport={{ once: true }}
             >
